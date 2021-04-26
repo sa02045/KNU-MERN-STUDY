@@ -1,7 +1,3 @@
-# 스터디 시작하기 전에....
-
-## 2시간을 혼자 끌고 갈 강의력이 없으니 많이 얘기해주고 질문 주세요!!
-
 # 프로젝트 개요
 
 ## 최종목표 - 이 그림을 이해하자!
@@ -23,11 +19,10 @@ https://roadmap.sh/
 # 오늘 Todo
 
 - 프로젝트 환경 세팅
-- git 기초 + github.io 개인페이지 실제 배포하기
+- git 기초 + github.io 개인페이지 실제 배포해보기
 - localhost에서 프런트서버 만들기
 - HTML, CSS, JS 기초
-- 다른 언어와 JS 차이 정리
-- React 맛보기
+- Vanila js로 채팅구현하기
 
 # 프로젝트 환경 세팅
 
@@ -78,7 +73,7 @@ git config --global user.email "메일주소"
 ## 3.
 
 ```
-git add remote origin 주소
+git remote add origin 주소
 git add index.html README.md
 git commit -m "Add index.html README.md"
 git push origin master
@@ -184,6 +179,27 @@ Flex는 태그들을 위치시키고 정렬하는 방법입니다
 
 # 브라우저는 어떻게 동작하는가?
 
-## 웹 개발자 필독 아티클 -
+![브라우저동작원리](https://user-images.githubusercontent.com/50866506/116036401-984c1300-a6a1-11eb-8e6f-3f2b26c337a2.png)
+
+1. 브라우저가 HTML파일을 읽어 해석하기 시작한다 (파싱)
+2. HTML파일을 DOM트리로 변환한다
+   - DOM : HTML의 태그들을 객체화화여 자바스크립트가 조작할 수 있도록 만듬
+   -
+3. CSS파일을 파싱하여 CSSOM트리로 변환한다
+4. DOM 트리와 CSSOM 트리를 합처 렌더트리로 만든다
+5. 렌더링 엔진이 렌더트리를 읽어 브라우저의 화면에 그린다
+
+6. `<script src="">`를 만나면 HTML 파싱을 멈추고, 자바스크립트 엔진(V8) 이 자바스크립트 파일을 실행한다 - body 맨 밑에 놔둬야하는 이유
+
+## DOM - 자바스크립트로 HTML을 조작할 수 있는 API
+
+## CSSOM - 자바스크립트로 CSS를 조작할 수 있는 API
 
 https://d2.naver.com/helloworld/59361
+
+## Node Js
+
+# 다음 시간
+
+- 자바스크립트 프론트엔드 프레임워크 리액트의 기본
+- 리액트로 채팅창 구현해보기
