@@ -21,8 +21,9 @@ https://roadmap.sh/
 - 프로젝트 환경 세팅
 - git 기초 + github.io 개인페이지 실제 배포해보기
 - localhost에서 프런트서버 만들기
-- HTML, CSS, JS 기초
+- HTML, CSS, JS 기초 정리
 - Vanila js로 채팅구현하기
+- API 사용해보기
 
 # 프로젝트 환경 세팅
 
@@ -87,9 +88,36 @@ Settings - Github Pages - Source - Branch:master - Save
 
 # 우리가 뭘 했나요?
 
-1. `프런트 서버를 만듬` (github가 제공하는 간단한 방법으로.... 원래는 훨씬 복잡)
-2. 프런트 서버에게 `index.html`을 주고
+1. `프런트 서버를 만듬` (github pages라는 호스팅서버 서비스를 이용)
+2. 서버에게 `index.html`을 주고
 3. https://sa02045.github.io/KNU-MERN-STUDY/ `주소로 접속할 때마다 브라우저에게 index.html을 제공(server)하도록 만듬`
+
+# 브라우저는 어떻게 동작하는가?
+
+![브라우저동작원리](https://user-images.githubusercontent.com/50866506/116036401-984c1300-a6a1-11eb-8e6f-3f2b26c337a2.png)
+
+1. 브라우저가 HTML파일을 읽어 해석하기 시작한다 (파싱)
+2. HTML파일을 DOM트리로 변환한다
+   - DOM : HTML의 태그들을 객체화화여 자바스크립트가 조작할 수 있도록 만듬
+   -
+3. CSS파일을 파싱하여 CSSOM트리로 변환한다
+4. DOM 트리와 CSSOM 트리를 합처 렌더트리로 만든다
+5. 렌더링 엔진이 렌더트리를 읽어 브라우저의 화면에 그린다
+
+6. `<script src="">`를 만나면 HTML 파싱을 멈추고, 자바스크립트 엔진(V8) 이 자바스크립트 파일을 실행한다 - body 맨 밑에 놔둬야하는 이유
+
+## DOM - 자바스크립트로 HTML을 조작할 수 있는 API
+
+## CSSOM - 자바스크립트로 CSS를 조작할 수 있는 API
+
+https://d2.naver.com/helloworld/59361
+
+## Node Js
+
+# 다음 시간
+
+- 자바스크립트 프론트엔드 프레임워크 리액트의 기본
+- 리액트로 채팅창 구현해보기
 
 # HTML
 
@@ -176,30 +204,3 @@ Flex는 태그들을 위치시키고 정렬하는 방법입니다
 - 호이스팅(넘어가도됨)
 
 ## 표현식으로 button 클릭 이벤트 콜백함수 작성해보기
-
-# 브라우저는 어떻게 동작하는가?
-
-![브라우저동작원리](https://user-images.githubusercontent.com/50866506/116036401-984c1300-a6a1-11eb-8e6f-3f2b26c337a2.png)
-
-1. 브라우저가 HTML파일을 읽어 해석하기 시작한다 (파싱)
-2. HTML파일을 DOM트리로 변환한다
-   - DOM : HTML의 태그들을 객체화화여 자바스크립트가 조작할 수 있도록 만듬
-   -
-3. CSS파일을 파싱하여 CSSOM트리로 변환한다
-4. DOM 트리와 CSSOM 트리를 합처 렌더트리로 만든다
-5. 렌더링 엔진이 렌더트리를 읽어 브라우저의 화면에 그린다
-
-6. `<script src="">`를 만나면 HTML 파싱을 멈추고, 자바스크립트 엔진(V8) 이 자바스크립트 파일을 실행한다 - body 맨 밑에 놔둬야하는 이유
-
-## DOM - 자바스크립트로 HTML을 조작할 수 있는 API
-
-## CSSOM - 자바스크립트로 CSS를 조작할 수 있는 API
-
-https://d2.naver.com/helloworld/59361
-
-## Node Js
-
-# 다음 시간
-
-- 자바스크립트 프론트엔드 프레임워크 리액트의 기본
-- 리액트로 채팅창 구현해보기
