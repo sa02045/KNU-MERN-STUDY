@@ -1,8 +1,11 @@
-const btn = document.querySelector(".js-btn")
-const title = document.querySelector(".js-title")
+const btn = document.querySelector(".btn")
 
-const clickHandler = () => {
-  title.style.color = "#FF0000"
-}
+btn.addEventListener("click", () => {
+  const container = document.querySelector(".container")
 
-btn.addEventListener("click", clickHandler)
+  const h1 = document.createElement("h1")
+
+  h1.textContent = "새로들어가는 함수DOM"
+
+  container.appendChild(h1)
+})

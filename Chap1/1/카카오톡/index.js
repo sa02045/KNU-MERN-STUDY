@@ -19,5 +19,6 @@ const keydownHandler = (e) => {
     clickHandler()
   }
 }
+
 btn.addEventListener("click", clickHandler)
 window.addEventListener("keydown", keydownHandler)

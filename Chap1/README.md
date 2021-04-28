@@ -88,36 +88,9 @@ Settings - Github Pages - Source - Branch:master - Save
 
 # 우리가 뭘 했나요?
 
-1. `프런트 서버를 만듬` (github pages라는 호스팅서버 서비스를 이용)
+1. `프런트 서버(웹서버)를 만듬` (github pages라는 서버호스팅 서비스를 이용)
 2. 서버에게 `index.html`을 주고
 3. https://sa02045.github.io/KNU-MERN-STUDY/ `주소로 접속할 때마다 브라우저에게 index.html을 제공(server)하도록 만듬`
-
-# 브라우저는 어떻게 동작하는가?
-
-![브라우저동작원리](https://user-images.githubusercontent.com/50866506/116036401-984c1300-a6a1-11eb-8e6f-3f2b26c337a2.png)
-
-1. 브라우저가 HTML파일을 읽어 해석하기 시작한다 (파싱)
-2. HTML파일을 DOM트리로 변환한다
-   - DOM : HTML의 태그들을 객체화화여 자바스크립트가 조작할 수 있도록 만듬
-   -
-3. CSS파일을 파싱하여 CSSOM트리로 변환한다
-4. DOM 트리와 CSSOM 트리를 합처 렌더트리로 만든다
-5. 렌더링 엔진이 렌더트리를 읽어 브라우저의 화면에 그린다
-
-6. `<script src="">`를 만나면 HTML 파싱을 멈추고, 자바스크립트 엔진(V8) 이 자바스크립트 파일을 실행한다 - body 맨 밑에 놔둬야하는 이유
-
-## DOM - 자바스크립트로 HTML을 조작할 수 있는 API
-
-## CSSOM - 자바스크립트로 CSS를 조작할 수 있는 API
-
-https://d2.naver.com/helloworld/59361
-
-## Node Js
-
-# 다음 시간
-
-- 자바스크립트 프론트엔드 프레임워크 리액트의 기본
-- 리액트로 채팅창 구현해보기
 
 # HTML
 
@@ -130,20 +103,6 @@ https://d2.naver.com/helloworld/59361
 
 - 자주 쓰이는 태그 정리
 - https://www.advancedwebranking.com/html/
-
-### 혹시 항상 div만 사용하나요??
-
-- 카카오 프론트엔드 코딩테스트 기출문제 중
-- HTML을 "시맨틱" 하게 태그를 작성하시오
-- https://ui.toast.com/fe-guide/ko_HTMLCSS#%EB%AA%A9%EC%A0%81%EC%97%90-%EB%A7%9E%EB%8A%94-html-%ED%83%9C%EA%B7%B8%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%9C%EB%8B%A4
-
-## HTML 실습하기
-
-1. !DOCTYPE : HTML문서임을 브라우저에게 알려주는 태그
-2. head태그 : 메타데이터를 알려주는 역할 (ex. 홈페이지 아이콘, 홈페이지 타이틀등)
-3. body태그 : HTML의 본문
-
-### div태그를 만들고 그 안에 h1태그와 button태그를 만들어보자
 
 ## display inline vs block
 
@@ -168,13 +127,13 @@ https://ui.toast.com/fe-guide/ko_HTMLCSS#%EC%8A%A4%ED%83%80%EC%9D%BC-%EC%A7%80%E
 
 ## 3. BOX 모델
 
-![11](https://user-images.githubusercontent.com/50866506/115513662-4892d380-a2be-11eb-8056-b45f9340e1ff.png)
+![박스모델](https://user-images.githubusercontent.com/50866506/115513662-4892d380-a2be-11eb-8056-b45f9340e1ff.png)
 
 button에 margin과 padding을 적용해보고 F12를 눌러 확인해봅시다
 
 ## 4. Flex
 
-Flex는 태그들을 위치시키고 정렬하는 방법입니다
+Flex는 태그들의 레이아웃 위치시키고 정렬하는 방법입니다
 
 ![flex](https://user-images.githubusercontent.com/50866506/115513894-8859bb00-a2be-11eb-89af-03c011a5efb1.jpg)
 
@@ -201,6 +160,35 @@ Flex는 태그들을 위치시키고 정렬하는 방법입니다
 ## 표현식을 사용하는 이유?
 
 - 함수를 인자로 넘길 수 있음 (콜백함수)
-- 호이스팅(넘어가도됨)
+- 호이스팅(에러가 날수 있음)
 
-## 표현식으로 button 클릭 이벤트 콜백함수 작성해보기
+```js
+// 실행 전
+logMessage()
+sumNumbers()
+
+function logMessage() {
+  return "worked"
+}
+
+var sumNumbers = function () {
+  return 10 + 20
+}
+```
+
+자바스크립트 엔진은 호이스팅(변수와 함수를 끌어올림)으로 다음처럼 해석합니다
+
+```js
+function logMessage() {
+  return "worked"
+}
+
+var sumNumbers
+
+logMessage() // 'worked'
+sumNumbers() // 에러!
+
+sumNumbers = function () {
+  return 10 + 20
+}
+```

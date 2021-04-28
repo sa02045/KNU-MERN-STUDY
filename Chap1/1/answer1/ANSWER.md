@@ -45,6 +45,7 @@ ex) 글씨 색깔이 원래 #fefefe였는데 #bcbcbc로 바꾸고 싶어요
   color:#fefefe;
 }
 
+
 ...
 ...
 ...
@@ -118,6 +119,12 @@ const clickHandler = function () {
 
 - 렌더링 엔진
 - 크롬(웹킷)
+
+6. DOM엘리먼트가 바뀔 때마다 브라우저는 다시 렌더링됩니다
+
+- VirtualDOM, React가 나오게 된 배경
+
+[브라우저는 어떻게 동작하는가](https://d2.naver.com/helloworld/59361)
 
 ### Javascript 엔진
 
