@@ -1,0 +1,5 @@
+.head-container {
+  width: 768px;
+  height: 100px;
+  background-color: var(--head-bg-color);
+}
