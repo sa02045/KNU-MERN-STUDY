@@ -1,5 +1,9 @@
 # 2일차 React
 
+## 0. 프로젝트하기 전 자바스크립트 문법 정리하기
+
+[문법정리하기](https://repetition-motivation.tistory.com/manage/posts/)
+
 ## 1.NodeJS 이해하기
 
 [NodeJS 이해하기](https://repetition-motivation.tistory.com/164)
@@ -8,11 +12,15 @@
 
 [모듈 이해하기](https://repetition-motivation.tistory.com/163)
 
-## 3. 프로젝트하기 전 자바스크립트 문법 정리하기
+## 3 CRA없이 React 시작하기
 
-[문법정리하기](https://repetition-motivation.tistory.com/manage/posts/)
+[React시작](https://repetition-motivation.tistory.com/166)
 
-## 4. React 시작하기
+## 3-2 웹팩 실습하기
+
+[웹팩기초실습](https://repetition-motivation.tistory.com/167)
+
+## 4. CRA로 React 시작하기
 
 프로그램을 만드는 과정을 그림 그리기에 비유해봅시다
 어떤 대규모의 큰 그림을 만드는 작업을 할 때 처음부터 선 하나하나를 그린다음 색칠을 해도 되지만 ,색칠공부 책처럼 이미 그려진 그림을 가져오고 그 위에 색칠만 하는 작업을 해도 충분합니다.

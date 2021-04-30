@@ -1,1 +1,0 @@
-const mooyaho = require("mooyaho")
