@@ -1,0 +1,1 @@
+(()=>{var r={672:r=>{r.exports=()=>{console.log("asdf")}}},o={};!function e(t){var s=o[t];if(void 0!==s)return s.exports;var n=o[t]={exports:{}};return r[t](n,n.exports,e),n.exports}(672)()})();

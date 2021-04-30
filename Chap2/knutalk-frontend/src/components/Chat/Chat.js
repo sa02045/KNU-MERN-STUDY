@@ -25,9 +25,7 @@ function Chat({ msgs, setMsgs }) {
   return (
     <div className="chat-container">
       <input className="input" value={input} onChange={inputChange} onKeyDown={enterKey}></input>
-      <button className="btn" onClick={btnClick}>
-        전송
-      </button>
+      <button className="btn" onClick={btnClick}></button>
     </div>
   )
 }
