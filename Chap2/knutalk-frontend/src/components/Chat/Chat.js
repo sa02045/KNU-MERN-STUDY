@@ -11,6 +11,7 @@ function Chat({ msgs, setMsgs }) {
   }
 
   const inputChange = (e) => {
+    console.log(e.target.value)
     setInput(e.target.value)
   }
 
