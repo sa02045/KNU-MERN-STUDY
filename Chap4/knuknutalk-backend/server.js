@@ -22,9 +22,9 @@ db.once("open", () => {
       const messageDocument = change.fullDocument
       const newMessage = {
         name: messageDocument.name,
-        message: messageDocument.text,
+        message: messageDocument.message,
       }
-      pusher.trigger("messages", "", newMessage)
+      pusher.trigger("messages", "inserted", newMessage)
     } else {
       console.log("Error")
     }
