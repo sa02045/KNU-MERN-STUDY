@@ -1,10 +1,10 @@
-import express from "express"
-import cors from "cors"
+import express from "express";
+import cors from "cors";
 
-import db from "./db.js"
-import MessageModel from "./messageModel.js"
+import db from "./db/db.js";
+import MessageModel from "./db/schema/message.js";
 
-import pusher from "./pusher.js"
+import pusher from "./pusher/pusher.js";
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -26,7 +26,7 @@ db.once("open", () => {
       }
       pusher.trigger("messages", "inserted", newMessage)
     } else {
-      console.log("Error")
+      console.log("Error");
     }
   })
 })
@@ -42,7 +42,7 @@ app.get("/messages/sync", (req, res) => {
 })
 
 app.post("/messages/new", (req, res) => {
-  const newMessage = req.body
+  const newMessage = req.body;
   MessageModel.create(newMessage, (err, data) => {
     if (err) {
       res.status(500).send(err)

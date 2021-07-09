@@ -1,8 +1,9 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
-const URL = 'mongodb+srv://knutalk:JcaMtbgEgFK22MW8@cluster0.qe2tv.mongodb.net/knutalk?retryWrites=true&w=majority'
+dotenv.config();
 
-mongoose.connect(URL, {
+mongoose.connect(process.env.MONGODB_URL, {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true
